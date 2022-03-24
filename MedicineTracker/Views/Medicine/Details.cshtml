@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link href="~/lib/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <title>" Medicine Details" </title>
+</head>
+<body>
+    @model MedicineTracker.Models.Medicine
+    <div class="row">
+            <div class="col-4">
+
+                <div class="card">
+                    <div class="card-header">
+                        <h2>@Model.Name</h2>
+                    </div>
+                    <div class="card-body">
+                        <h4>@Model.Brand</h4>
+                        <h4>@Model.Price</h4>
+                        <h4>@Model.Quantity</h4>
+                        <h4>@Model.ExpiryDate</h4>
+                        <h4>@Model.Notes</h4>
+                        <a href="/medicine/Details/@Model.Id" class="btn-primary">Details</a>
+                    </div>
+                </div>
+            </div>
+    </div>
+</body>
+
+
+
+
+</html>

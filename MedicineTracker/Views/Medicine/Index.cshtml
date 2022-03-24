@@ -1,0 +1,39 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="~/lib/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <title>" Medicine Tracker for Client ABC Pharmacyy" </title>
+</head>
+<body>
+    @model IEnumerable<MedicineTracker.Models.Medicine>
+    <div class="row">
+        @foreach (var medicine in Model)
+        {
+            <div class="col-4">
+
+                <div class="card">
+                    <div class="card-header">
+                        <h2>@medicine.Name</h2>
+                    </div>
+                    <div class="card-body">
+                        <h4>@medicine.Brand</h4>
+                        <h4>@medicine.Price</h4>
+                        <h4>@medicine.Quantity</h4>
+                        <h4>@medicine.ExpiryDate</h4>
+                        <a href="/medicine/Details/@medicine.Id" class="btn-primary">Details</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+    <div>
+
+    </div>
+    </body>
+
+
+
+
+</html>
+
